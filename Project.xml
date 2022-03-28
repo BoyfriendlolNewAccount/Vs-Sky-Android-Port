@@ -2,8 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Unleashed" file="FNF U Vs GA" packageName="com.kadedev.kadeengine" package="com.kadedev.kadeengine" main="Main" version="0.2.7.1" company="kadedev" />
-	<!--Zack why are you so fuckin stupid-->
+	<app title="Friday Night Funkin': Vs Sky" file="Skylol" packageName="com.sky.kadeengine" package="com.sky.kadeengine" main="Main" version="0.2.7.1" company="kadedev" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
@@ -119,19 +118,12 @@
 
 	<!--In case you want to use the ui package-->
 	<haxelib name="flixel-ui" />
-	<haxelib name="newgrounds" unless='android'/>
 	<haxelib name="faxe" if='switch'/>
 	<haxelib name="polymod"/>
 	<haxelib name="discord_rpc" if="windows"/>
 	<haxelib name="linc_luajit" if="desktop || android"/>
 	<haxelib name="extension-webm" if="desktop"/> <!--Just use https://www.github.com/KadeDev/extension-webm please (only one that works, lmao)-->
-	<haxelib name="actuate" unless='android'/>
 	<!-- <haxelib name="hxcpp-debug-server" if="desktop"/> -->
-        <haxelib name="extension-webview" if="android"/>
-        <haxelib name="AndroidTools" if="android"/>
-
-        <config:android permission="android.permission.READ_EXTERNAL_STORAGE" if="android"/>
-        <config:android permission="android.permission.WRITE_EXTERNAL_STORAGE" if="android"/>
 
 	<!-- <haxelib name="markdown" /> -->
 	<!-- <haxelib name="HtmlParser" /> -->
@@ -171,10 +163,6 @@
 	<!--Enable this for Nape release builds for a serious peformance improvement-->
 	<haxedef name="NAPE_RELEASE_BUILD" unless="debug" />
 
-	<!-- Akways enable Null Object Reference check -->
-	<haxedef name="HXCPP_CHECK_POINTER" if="release" />
-	<haxedef name="HXCPP_STACK_LINE" if="release" />
-
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
@@ -190,6 +178,4 @@
 
 
 	<!-- <haxedef name="SKIP_TO_PLAYSTATE" if="debug" /> -->
-	<haxedef name="NG_LOGIN" if="newgrounds" />
-	
 </project>
