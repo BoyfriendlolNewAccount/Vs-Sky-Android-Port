@@ -117,6 +117,10 @@ class MainMenuState extends MusicBeatState
 			controls.setKeyboardScheme(KeyboardScheme.Duo(true), true);
 
 		changeItem();
+		
+		#if android
+		addVirtualPad(UP_DOWN);
+		#end
 
 		super.create();
 	}
