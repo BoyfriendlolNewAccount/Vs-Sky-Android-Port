@@ -21,7 +21,9 @@ class WarningState extends MusicBeatState
 		bg.loadGraphic(Paths.image("warning"));
 		add(bg);
 		
-		
+		#if android
+                addVirtualPad(NONE, A_B);
+                #end
 	}
 	
 	
