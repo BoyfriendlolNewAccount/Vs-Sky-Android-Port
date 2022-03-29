@@ -41,14 +41,18 @@ class EndingState extends FlxState
 		
 		
 		new FlxTimer().start(8, endIt);
-		
+
+
+		#if android
+                addVirtualPad(NONE, A);
+                #end
 	}
 	
 	override public function update(elapsed:Float):Void 
 	{
 		super.update(elapsed);
 		
-		if (FlxG.keys.pressed.ENTER){
+		if (controls.ACCEPT){
 			endIt();
 		}
 		
