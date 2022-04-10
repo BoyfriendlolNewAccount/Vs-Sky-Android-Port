@@ -53,12 +53,6 @@ class TitleState extends MusicBeatState
 		FlxG.android.preventDefaultKeys = [BACK];
 		#end
 		
-		#if sys
-		if (!sys.FileSystem.exists(SUtil.getPath() + "assets/replays"))
-			sys.FileSystem.createDirectory(SUtil.getPath() + "assets/replays");
-		#end
-
-		
 		PlayerSettings.init();
 
 		#if windows
