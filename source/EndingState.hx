@@ -48,7 +48,7 @@ class EndingState extends FlxState
 	{
 		super.update(elapsed);
 		
-		if (FlxG.keys.pressed.ENTER #if android || justTouched #end){
+		if (FlxG.keys.pressed.ENTER){
 			endIt();
 		}
 		
